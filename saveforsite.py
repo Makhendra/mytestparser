@@ -39,8 +39,8 @@ for poem in sorted(pages_poems):
     title = str(soup.find_all('h1')[0])
     text = str(soup.find_all('div', 'text')[0])
     # big_data.append([poem, title, text])
-    file = 'poems/'+poem[21:-4].replace('/', '.')+'_'+title[4:-5]+'.txt'
-    f = open(file, 'w', "utf-8")
+    file = './poems/'+poem[21:-4].replace('/', '.')+'_'+title[4:-5]+'.txt'
+    f = open(file, 'w', encoding="utf-8")
     f.write(text[18:-6])
     # break
 
